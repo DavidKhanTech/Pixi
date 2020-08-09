@@ -33,7 +33,7 @@ Express Router	Lorem ipsum dolor sit amet, consectetur.
 # Client (Front End)
 # Wireframes
 
-<img src= url("https://ibb.co/wy6c7tg")>
+<img src= "https://i.ibb.co/6YsX8Qw/Pixi-Wireframe.png">
 
 https://ibb.co/wy6c7tg
 
@@ -76,7 +76,7 @@ TOTAL		6 hrs	3 hrs	TBD
 # Server (Back End)
 ERD Model
 
-<img src= url("https://ibb.co/C74PmY5")>
+<img src= "https://i.ibb.co/cFRYkZc/Screen-Shot-2020-08-09-at-3-32-48-PM.png")>
 
 https://ibb.co/C74PmY5
 
