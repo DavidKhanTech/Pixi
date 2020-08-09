@@ -80,7 +80,6 @@ ERD Model
 https://ibb.co/C74PmY5
 
 # Post-MVP
-Create a full functional app that allows users to post photography jobs.
 Create a user gallery page that shows featured previous users work and have featured photographers on the site.
 Build pop-ups based on app design for user errors, contact and confirmations.
 Make the site moble friendly
