@@ -2,21 +2,24 @@
 If you are looking for a photographer for those special moments in life or looking for work as a photographer Pixi is here to help.
 
 # Overview
-Project Title is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+Pixi is a web and mobile application that makes it easy to find a photographer ready to work and creating more jobs for up and coming photographers.  No longer miss all the fun happening around you, fumbling with a camera, hire a pro! Users can make an account and post jobs or availability to work. The app's ultimate goal is to connect people with affordable photographers for all the special moments in life while making photography more accessible for everyone.
 
 
 # MVP
-The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
 
-The Project Title MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper.
+## Backend
+Set up NodeJS and Express backend file architecture.
+Install dependecies such as Mongoose for MongoDB, Express, etc.
+Build out the schema to store user information and posts.
+Imported and connected files to make sure they perform full CRUD functionality.
+Deploy to Heruko and connect to MongoDB Atlas, tested CRUD functionality using MongoDB Compass and Postman.
+## Front-End
+Create a well-designed front-end experience.
+Set up the front-end file architecture components, images, services, and screens. 
+Style all components.
+Build out the ability to create, edit, and delete user account information.
+Deploy site using Netlify.
 
-
-# Goals
-Lorem ipsum, dolor sit amet,
-consectetur adipiscing elit.
-Phasellus dapibus fermentum risus vitae bibendum.
-Integer vel ipsum mollis odio sollicitudin ornare eu vel ex.
-etc.
 
 # Libraries and Dependencies
 
@@ -62,7 +65,7 @@ Footer	functional	n	n	The footer will show info about me and a link to my portfo
 
 # Time Estimates
 
-Task	Priority	Estimated Time	Time Invested	Actual Time
+Invested	Actual Time
 Add Contact Form	L	3 hrs	2 hrs	3 hrs
 Create CRUD Actions	H	3 hrs	1 hrs	TBD
 TOTAL		6 hrs	3 hrs	TBD
@@ -74,7 +77,10 @@ Use this section to display an image of a computer generated ERD model. You can 
 
 
 # Post-MVP
-Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+Create a fully-functional screen that allows users to post jobs or job search posts.
+Create a user gallery page that shows previous user work of featured photographers on the site.
+Build pop-ups based on app design for user errors and confirmations.
+Implemented mobile-friendly styling.
 
 # Code Showcase
 Lorem Ipsom
