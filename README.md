@@ -33,6 +33,8 @@ Express Router	Lorem ipsum dolor sit amet, consectetur.
 # Client (Front End)
 # Wireframes
 
+<img src= url("https://ibb.co/wy6c7tg")>
+
 https://ibb.co/wy6c7tg
 
 # Component Tree
@@ -73,8 +75,10 @@ TOTAL		6 hrs	3 hrs	TBD
 
 # Server (Back End)
 ERD Model
-Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
 
+<img src= url("https://ibb.co/C74PmY5")>
+
+https://ibb.co/C74PmY5
 
 # Post-MVP
 Create a fully-functional screen that allows users to post jobs or job search posts.
