@@ -1,5 +1,5 @@
 # ⓅPixi
-If you are looking for a photographer for those special moments in life or looking for work as a photographer Pixi is here to help.
+An app created to help capture those special moments in life.
 
 # Overview
 Pixi is a web and mobile application that makes it easy to find a photographer ready to work for you.  Pixi helps people find photography easier and helps create more jobs for up and coming photographers.  No longer miss all the fun happening around you, fumbling with a camera, hire a pro! Users can make an account and post jobs or availability to work. The app's ultimate goal is to make photography more accessible and connect people with affordable photographers for all the special moments in life. 
