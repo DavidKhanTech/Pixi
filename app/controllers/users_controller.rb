@@ -18,6 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      # might need to code pw not id
       @token = encode({id: @user.id})
       render json: {
         user: @user.attributes.except("password_digest"),
