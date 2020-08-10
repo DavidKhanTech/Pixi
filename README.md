@@ -28,52 +28,21 @@ Build out the ability to login, create, edit, and delete user account informatio
 Deploy site using Netlify.
 
 
-# Libraries and Dependencies
-
-Library	Description
-React	Lorem ipsum dolor sit amet, consectetur.
-React Router	Lorem ipsum dolor sit amet, consectetur.
-React SemanticUI	Lorem ipsum dolor sit amet, consectetur.
-Express	Lorem ipsum dolor sit amet, consectetur.
-Express Router	Lorem ipsum dolor sit amet, consectetur.
-
 # Client (Front End)
 # Wireframes
 
 https://ibb.co/wy6c7tg
 
 
-# Component Hierarchy
-Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
-
-
-src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-|__ services/
-
-# Component Breakdown
-Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
-
-Component	Type	state	props	Description
-Header	functional	n	n	The header will contain the navigation and logo.
-Navigation	functional	n	n	The navigation will provide a link to each of the pages.
-Gallery	class	y	n	The gallery will render the posts using cards in flexbox.
-Gallery Card	functional	n	y	The cards will render the post info via props.
-Footer	functional	n	n	The footer will show info about me and a link to my portfolio.
-
-
 # Time Estimates
 
-Invested	Actual Time
-Add Contact Form	L	3 hrs	2 hrs	3 hrs
-Create CRUD Actions	H	3 hrs	1 hrs	TBD
-TOTAL		6 hrs	3 hrs	TBD
+          
+Build Back End	estimated 8 hrs	
+Create Login    estimated 8 hrs
+Create CRUD Actions	estimated 8 hours
+Front End       estimated 8 hours
+Style           estimated 8 hrs
+TOTAL		        estimated 40 hrs
 
 
 # Server (Back End)
