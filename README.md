@@ -49,7 +49,7 @@ TOTAL		        estimated 40 hrs
 # Server (Back End)
 ERD Model
 
-https://ibb.co/sW1TTWf
+https://ibb.co/D8702Gq
 
 
 # Post-MVP
