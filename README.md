@@ -7,7 +7,7 @@ Pixi is here to help clients and photographers connect easier while creating mor
 Pixi Users can make an account and post jobs or availability to work. The app's ultimate goal is to make photography more accessible and connect people with affordable photographers for all the special moments in life. 
 # MVP
 
-## Backend
+# Backend
 Build a Ruby on Rails server, exposing RESTful JSON endpoints.
 Build a database with at least 3 tables
 Utilize Rails to define models for interacting with the database.
@@ -15,7 +15,7 @@ Implement working generic controller actions for Full CRUD (index, show, create,
 Build out the schema to store user information and posts.
 Import and connect files to make sure they perform full CRUD functionality.
 Deploy to Heruko and connect to MongoDB Atlas, tested CRUD functionality using MongoDB Compass and Postman.
-## Front-End
+# Front-End
 Create a well-designed front-end experience.
 Have a working, interactive React app
 Have at least 8 separate, rendered components in an organized and understandable React file structure.
