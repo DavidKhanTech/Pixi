@@ -29,10 +29,11 @@ Deploy site using Netlify.
 
 
 # Client (Front End)
-# Wireframes
+# Wireframe
 
 https://ibb.co/wy6c7tg
 
+https://ibb.co/C74PmY5
 
 # Time Estimates
 
@@ -48,7 +49,8 @@ TOTAL		        estimated 40 hrs
 # Server (Back End)
 ERD Model
 
-https://ibb.co/C74PmY5
+https://ibb.co/sW1TTWf
+
 
 # Post-MVP
 Create a user gallery page that shows featured previous users work and have featured photographers on the site.
