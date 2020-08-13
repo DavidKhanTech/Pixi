@@ -8,16 +8,35 @@ export default class Landing extends Component {
     this.state = {
       login: true
     }
+    this.handleSignUp = this.handleSignUp.bind(this)
+    this.handleLogin = this.handleLogin.bind(this)
   }
+
+  handleSignUp() {
+    this.setState({ login: false })
+  }
+
+  handleLogin() {
+    this.setState({ login: true })
+  }
+
   render() {
     return (
       <div>
-        {this.state.login ?
-          <LoginForm />
-          :
-          <SignUp />
-        }
+        <button onClick={this.handleSignUp}>
+          Sign Up
+      </button>
+        <button onClick={this.handleLogin}>
+          Login
+      </button>
+        <div>
+          {this.state.login ?
+            <LoginForm />
+            :
+            <SignUp />
+          }
 
+        </div>
       </div>
     )
   }

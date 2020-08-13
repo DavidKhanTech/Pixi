@@ -2,8 +2,25 @@
 header{
 background: #ff1654;
 color: white;
-padding: 200px;
+padding: 20px;
 }
 img{
  height: 200px;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+  size: 3rem;
+  line-height: 1.5;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+.login-form {
+  vertical-align: middle;
+}
+
+.footer-container {
+  margin-top: 100px;
 }

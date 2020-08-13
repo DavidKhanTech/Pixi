@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import api from '../services/api-helper';
 
-export default class Posts extends Component {
+export default class Post extends Component {
   constructor(props) {
     super(props)
+    this.id = props.match.params.id;
     this.state = {
-      posts: []
+      user: "Not a post",
+      post: "This post does not exist"
     }
   }
 
   async componentDidMount() {
-    let result = await api.getPosts()
+    let result = await api.getPost(this.id)
     if (result) {
       this.setState({
         user: result.user,
@@ -22,12 +24,8 @@ export default class Posts extends Component {
   render() {
     return (
       <div>
-        <h1>Posts:</h1>
-        <ul>
-          {this.state.posts.length > 0 ?
-            this.state.posts.map(post => <li><a href={`/posts/${post.id}`}>{post.post}</a></li>)
-            : "No Posts"}
-        </ul>
+        <h1>{this.state.user}</h1>
+        <p>{this.state.post}</p>
       </div>
     )
   }
