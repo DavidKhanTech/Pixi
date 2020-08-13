@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { removeToken } from '../services/auth';
-import { useHistory } from 'react-router-dom';
-// import image from 'src/images/jordan-whitfield-qODM8pfwRO4-unsplash-removebg-preview.png'
+// import { removeToken } from '../services/auth';
+// import { useHistory } from 'react-router-dom';
+// import { AppRegistry, Image } from 'react-native';
 
 
 export default class Header extends Component {
@@ -26,7 +26,7 @@ export default class Header extends Component {
       <header>
         <h1>ⓅPixi</h1>
         <h2>Meet Photographers ready to work near you right now!</h2>
-        <img src="../images/jordan-whitfield-qODM8pfwRO4-unsplash-removebg-preview.png" />
+        {/* <Image source={require('../images/jordan-whitfield-qODM8pfwRO4-unsplash-removebg-preview.png')} /> */}
         {/* {
           props.currentUser ? (
             <>
