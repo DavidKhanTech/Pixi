@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Nav from './components/Nav'
 import './App.css';
-import { BrowserRouter } from 'react-router-dom'
-import Nav from "/src/components/Nav"
-import Landing from "/src/components/Landing"
-import Welcome from "/src/components/Welcome"
-import Posts from "/src/components/Posts"
-import Footer from "/src/components/Footer"
-import { Route, Switch } from "react-router-dom";
+import { verifyUser } from './services/auth';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    handleVerify()
+  }, [])
+
+  const handleVerify = async () => {
+    const userData = await verifyUser();
+    setCurrentUser(userData);
+  }
+
   return (
-    <>
-      <Nav />
+    <div className="App">
+      <Nav
+        currentUser={currentUser}
+        setCurrentUser={setCurrentUser}
+      />
 
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/welcome" component={Welcome} />
-        <Route exact path="/posts" component={Posts} />
-        <Route exact path="/post/:id" component={Post} />
-
-      </Switch>
-
-      <Footer />
-    </>
+    </div>
   );
 }
 
