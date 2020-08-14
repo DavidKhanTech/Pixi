@@ -22,10 +22,15 @@ h2{
 }
 
 .login-form {
+  margin: 100px;
   vertical-align: middle;
 }
 
 .footer-container {
-  margin-top: 100px;
+  background-color:   #ff1654;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+ 
 }
 
