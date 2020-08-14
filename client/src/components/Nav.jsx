@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 // import { removeToken } from '../services/auth';
 // import { useHistory } from 'react-router-dom';
-// import { AppRegistry, Image } from 'react-native';
-
+import image from "../images//julius-drost-dS-q7-zkD9c-unsplash.jpg"
 
 export default class Header extends Component {
   constructor(props) {
@@ -25,7 +24,9 @@ export default class Header extends Component {
     return (
       <header>
         <h1>ⓅPixi</h1>
+        <img src={image} alt="logo" />
         <h2>Meet Photographers ready to work near you right now!</h2>
+
         {/* <Image source={require('../images/jordan-whitfield-qODM8pfwRO4-unsplash-removebg-preview.png')} /> */}
         {/* {
           props.currentUser ? (
@@ -39,10 +40,10 @@ export default class Header extends Component {
 
         {
           //    props.currentUser && (
-          <>
-            <Link to="/posts">Posts</Link>
-            <Link to="/welcome">New Post</Link>
-          </>
+          // <>
+          //   <Link to="/posts">Posts</Link>
+          //   <Link to="/welcome">New Post</Link>
+          // </>
           //  )
         }
       </header >
