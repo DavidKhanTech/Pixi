@@ -34,7 +34,7 @@ export default class Form extends Component {
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <button onClick={this.handleSubmit}>Post!</button>
+        <button onClick={this.handleSubmit}>Post</button>
       </form>
     )
   }

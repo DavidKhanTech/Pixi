@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import api from '../services/api-helper';
 
+
 export default class Post extends Component {
   constructor(props) {
     super(props)
@@ -26,6 +27,8 @@ export default class Post extends Component {
       <div>
         <h1>{this.state.user}</h1>
         <p>{this.state.post}</p>
+        <button>Edit</button>
+        <button>Delete</button>
       </div>
     )
   }
