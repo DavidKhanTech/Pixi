@@ -3,6 +3,7 @@ import api from './api-helper';
 export const loginUser = async (loginData) => {
   const resp = await api.post('/auth/login', { authentication: loginData })
   localStorage.setItem('authToken', resp.data.token);
+  localStorage.setItem('user', JSON.stringify(resp.data.user))
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.user
 }
@@ -10,6 +11,7 @@ export const loginUser = async (loginData) => {
 export const registerUser = async (registerData) => {
   const resp = await api.post('/users/', { user: registerData })
   localStorage.setItem('authToken', resp.data.token);
+  localStorage.setItem('user', JSON.stringify(resp.data.user))
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   return resp.data.user
 }

@@ -9,17 +9,26 @@ export default class Header extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      posts: []
+      posts: [],
+      currentUser: {}
     }
+  }
+
+  componentDidMount() {
+    let currentUser = JSON.parse(localStorage.getItem('user'));
+    console.log(currentUser)
+    this.setState({
+      currentUser
+    })
   }
   // const history = useHistory();
 
-  // const handleLogout = () => {
-  //   props.setCurrentUser(null);
-  //   localStorage.removeItem("authToken");
-  //   removeToken();
-  //   history.push('/');
-  // }
+  handleLogout = () => {
+    localStorage.removeItem("authToken");
+    //removeToken();
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  }
 
   render() {
     return (
@@ -29,23 +38,24 @@ export default class Header extends Component {
         <h2>Meet Photographers ready to work near you right now!</h2>
 
         {/* <Image source={require('../images/jordan-whitfield-qODM8pfwRO4-unsplash-removebg-preview.png')} /> */}
-        {/* {
-          props.currentUser ? (
+        {
+          this.state.currentUser ? (
             <>
-              <p>{props.currentUser.username}</p>
-              <button onClick={handleLogout}>Logout</button>
+
+              <button onClick={this.handleLogout}>Logout</button>
             </>
-          ) : (""
-              //       <Link to='/login'>Login/SignUp</Link>
-            ) */}
+          ) : (
+              <Link to='/'>Login/SignUp</Link>
+            )
+        }
 
         {
-          //    props.currentUser && (
-          // <>
-          //   <Link to="/posts">Posts</Link>
-          //   <Link to="/welcome">New Post</Link>
-          // </>
-          //  )
+          this.state.currentUser ? (
+            <>
+              <Link to="/posts">Posts</Link>
+              <Link to="/welcome">New Post</Link>
+            </>
+          ) : ""
         }
       </header >
     )

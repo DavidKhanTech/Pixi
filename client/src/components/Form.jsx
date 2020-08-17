@@ -41,14 +41,14 @@
 // }
 
 import React, { Component } from 'react'
-import api from '../services/api-helper';
 import imports from '../services/imports'
 
 export default class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      value: ""
+      value: "",
+      currentUser: {}
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -57,16 +57,22 @@ export default class Form extends Component {
     this.setState({ value: event.target.value });
   }
 
+  componentDidMount() {
+    let currentUser = JSON.parse(localStorage.getItem('user'));
+    console.log(currentUser)
+    this.setState({
+      currentUser
+    })
+  }
+
   async handleSubmit(event) {
     event.preventDefault();
-    console.log("POST:", this.state.value)
     let post = this.state.value
-    let id = 1
-    // let result = await api.savePost({
-    //   post,
-    //   user_id: id
-    // })
-    // console.log("RES", result)
+    let result = await imports.savePost({
+      post,
+      user_id: this.state.currentUser.id
+    })
+    console.log("RES", result)
   }
 
   render() {
