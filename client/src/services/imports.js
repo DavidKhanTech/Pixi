@@ -1,4 +1,4 @@
-import axios from "axios"
+
 import api from "../services/api-helper"
 
 const savePost = async (postData) => {
@@ -7,12 +7,12 @@ const savePost = async (postData) => {
 }
 
 const editPost = async (postData) => {
-  const resp = await api.patch(`/posts/${postData}`, postData);
+  const resp = await api.patch(`/posts/${postData.id}`, { post: postData });
   return resp.data;
 }
 
 const deletePost = async (postData) => {
-  const resp = await api.delete(`/posts/${postData}`, postData);
+  const resp = await api.delete(`/posts/${postData.id}`, { post: postData });
   return resp.data;
 }
 
@@ -22,7 +22,7 @@ const getPost = async (postData) => {
 }
 
 const getPosts = async (postData) => {
-  const resp = await api.get(`/posts/`, postData);
+  const resp = await api.get(`/posts/`, { post: postData });
   return resp.data;
 }
 

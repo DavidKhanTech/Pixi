@@ -33,17 +33,17 @@ export default class Post extends Component {
 
   async handleEdit(event) {
     event.preventDefault();
-    let post = this.state.value
+    // let post = this.state.value
     let result = await imports.editPost({
-      post,
-      post_id: this.id
+      post: this.state.value,
+      id: this.id
     })
     console.log("RES", result)
   }
 
   async handleDelete() {
     let result = await imports.deletePost({
-      post_id: this.id
+      id: this.id
     })
     console.log("RES", result)
     this.props.history.push('/posts');

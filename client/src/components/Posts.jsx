@@ -17,13 +17,15 @@ export default class Posts extends Component {
       if (result) {
         this.setState({
           user: result.user,
-          post: result.post
+          post: result.post,
+          id: result.id
         })
+        console.log(this.state.posts)
       }
     } catch (e) {
       console.log("No posts or error:", e)
     }
-    console.log(this.state.posts.user)
+
   }
 
   render() {
