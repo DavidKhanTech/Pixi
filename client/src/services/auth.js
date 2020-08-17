@@ -13,6 +13,8 @@ export const registerUser = async (registerData) => {
   localStorage.setItem('authToken', resp.data.token);
   localStorage.setItem('user', JSON.stringify(resp.data.user))
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
+  console.log(resp.data.token + " token")
+  console.log(resp.data.user + " user")
   return resp.data.user
 }
 

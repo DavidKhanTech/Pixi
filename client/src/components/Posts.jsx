@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import api from '../services/api-helper';
+import imports from '../services/imports';
+
 
 
 export default class Posts extends Component {
@@ -12,7 +13,7 @@ export default class Posts extends Component {
 
   async componentDidMount() {
     try {
-      let result = await api.getPosts()
+      let result = await imports.getPosts()
       if (result) {
         this.setState({
           user: result.user,
@@ -22,6 +23,7 @@ export default class Posts extends Component {
     } catch (e) {
       console.log("No posts or error:", e)
     }
+    console.log(this.state.posts.user)
   }
 
   render() {
