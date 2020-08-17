@@ -27,12 +27,16 @@ export default function App() {
         <Header />
       </>
       <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/welcome" component={Welcome} />
-        <Route exact path="/posts" component={Posts} />
-        <Route exact path="/post/:id" component={Post} />
+        <Route exact path="/" render={(props) => <Landing {...props} setCurrentUser={setCurrentUser}
+          currentUser={currentUser}
+        />} />
+
+        <Route exact path="/welcome" render={(props) => <Welcome {...props} setCurrentUser={setCurrentUser} currentUser={currentUser} />} />
+        <Route exact path="/posts" render={(props) => <Posts {...props} setCurrentUser={setCurrentUser} currentUser={currentUser} />} />
+        <Route exact path="/post/:id" render={(props) => <Post {...props} setCurrentUser={setCurrentUser} currentUser={currentUser} />} />
       </Switch>
       <Footer />
+
     </div>
   )
   {/* currentUser={currentUser}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../services/api-helper';
+import { getPost } from "../services/imports";
 
 
 export default class Post extends Component {
