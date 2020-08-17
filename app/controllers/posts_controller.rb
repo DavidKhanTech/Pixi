@@ -33,6 +33,13 @@ class PostsController < ApplicationController
     end
   end
 
+def showposts
+  @user= User.find(params[:id])
+  @post= @user.posts
+  render json: @user, include: :posts 
+end
+
+
   # DELETE /posts/1
   def destroy
     @post.destroy
@@ -40,12 +47,12 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    # def set_post
-    #   @post = Post.find(params[:id])
-    # end
+    def set_post
+      @post = Post.find(params[:id])
+    end
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.permit(:post, :user_id)
+      params.require(:post).permit(:post, :user_id)
     end
 end
