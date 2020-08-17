@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import imports from '../services/imports';
+import { postComment } from '../services/comments';
 
 
 
@@ -14,11 +15,10 @@ export default class Posts extends Component {
   async componentDidMount() {
     try {
       let result = await imports.getPosts()
+      console.log("POSTS", result)
       if (result) {
         this.setState({
-          user: result.user,
-          post: result.post,
-          id: result.id
+          posts: result
         })
         console.log(this.state.posts)
       }

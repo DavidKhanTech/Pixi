@@ -16,7 +16,6 @@ export default class Header extends Component {
 
   componentDidMount() {
     let currentUser = JSON.parse(localStorage.getItem('user'));
-    console.log(currentUser)
     this.setState({
       currentUser
     })
@@ -42,10 +41,10 @@ export default class Header extends Component {
           this.state.currentUser ? (
             <>
 
-              <button onClick={this.handleLogout}>Logout</button>
+              <button className="logout" onClick={this.handleLogout}>Logout</button>
             </>
           ) : (
-              <Link to='/'>Login/SignUp</Link>
+              <Link className="signup" to='/'>Login/SignUp</Link>
             )
         }
 

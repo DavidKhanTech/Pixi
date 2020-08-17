@@ -72,7 +72,7 @@ export default class Form extends Component {
       post: post,
       user_id: this.state.currentUser.id
     })
-    console.log("RES", result)
+    window.location.href = `post/${result.id}`
   }
 
   render() {

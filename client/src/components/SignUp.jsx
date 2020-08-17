@@ -5,7 +5,8 @@ export default function Register(props) {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: ""
+    password: "",
+    error: ""
   })
 
   const handleChange = (e) => {
@@ -17,43 +18,51 @@ export default function Register(props) {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const userData = await registerUser(formData);
-    props.setCurrentUser(userData);
-    props.history.push('/welcome');
+    try {
+      e.preventDefault();
+      await registerUser(formData);
+      window.location.href = `/welcome`
+    } catch (e) {
+      setFormData({
+        error: "Invalid Credentials. (Username/email taken or Password too short)."
+      })
+    }
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h3>Register</h3>
-      <label>
-        Username:
+    <div>
+      <p>{formData.error}</p>
+      <form onSubmit={handleSubmit}>
+        <h3>Register</h3>
+        <label>
+          Username:
         <input
-          type="text"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Email:
+            type="text"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Email:
         <input
-          type="text"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Password:
+            type="text"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Password:
         <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-        />
-      </label>
-      <button>Submit</button>
-    </form>
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+          />
+        </label>
+        <button>Submit</button>
+      </form>
+    </div>
   )
 }

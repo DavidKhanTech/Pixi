@@ -9,3 +9,4 @@
 
 @admin = User.create!(username: 'David', email: 'coolguy@wow.com', password: '012345')
 p "Users created: #{User.count}"
+

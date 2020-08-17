@@ -65,9 +65,7 @@ export default class Landing extends Component {
             <img src={j} alt="logo" />
             <p>"I've found the Best and Affordable Photographer using Pixi and no longer miss the fun around me."</p>
           </div>
-          <br></br>
-          <br></br>
-          <br></br>
+
         </div>
         <div class="logos">
           <img src={biz} alt="logo" />
@@ -75,6 +73,9 @@ export default class Landing extends Component {
           <img src={tech} alt="logo" />
           <img src={tnw} alt="logo" />
         </div>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     )
   }

@@ -17,36 +17,45 @@ export default function Login(props) {
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const userData = await loginUser(formData);
-    props.setCurrentUser(userData)
-    props.history.push('/welcome')
+    try {
+      e.preventDefault();
+      const userData = await loginUser(formData);
+      props.setCurrentUser(userData)
+      props.history.push('/welcome')
+    } catch (e) {
+      setFormData({
+        error: "Invalid Credentials"
+      })
+    }
   }
 
   return (
-    <div class="login-form">
-      <form onSubmit={handleSubmit}>
-        <h3>Login</h3>
-        <label>
-          Username:
+    <div>
+      <p>{formData.error}</p>
+      <div class="login-form">
+        <form onSubmit={handleSubmit}>
+          <h3>Login</h3>
+          <label>
+            Username:
           <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Password:
+              type="text"
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Password:
         <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-          />
-        </label>
-        <button>Submit</button>
-      </form>
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
+          </label>
+          <button>Submit</button>
+        </form>
+      </div>
     </div>
   )
 }

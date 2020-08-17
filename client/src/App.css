@@ -29,7 +29,7 @@ p{
   vertical-align: middle;
 }
 
-.footer-container {
+footer{
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -45,7 +45,7 @@ button {
   text-align: center;
   font-size: 28px;
   padding: 10px;
-  width: 180px;
+  width: 140px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -106,7 +106,15 @@ input[type=submit] {
   -webkit-border-radius: 5px;
   border-radius: 5px; 
 }
-
+input{
+  padding:5px 15px; 
+  background:#ccc; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  border:2px solid #ccc; 
+}
 form{
   margin: 0 auto;
 }
@@ -114,6 +122,39 @@ form{
 .logos img{
 height: 50px;
 }
-.neon img{
+a{
+  font-size: 20px;
+}
+  a:link, a:visited {
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: black;
+}
 
+.login-form {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+div .footer-container{
+margin: 200px;
+}
+
+ button.logout{
+   font-size: 20px;
+  color: white;
+ background-color: #ff1654;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.signup{
+  font-color: #ff1654;
 }
