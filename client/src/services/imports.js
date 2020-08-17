@@ -2,7 +2,7 @@ import axios from "axios"
 import api from "../services/api-helper"
 
 const savePost = async (postData) => {
-  const resp = await api.post('/posts', postData);
+  const resp = await api.post('/posts', { post: postData });
   return resp.data;
 }
 

@@ -69,7 +69,7 @@ export default class Form extends Component {
     event.preventDefault();
     let post = this.state.value
     let result = await imports.savePost({
-      post,
+      post: post,
       user_id: this.state.currentUser.id
     })
     console.log("RES", result)
