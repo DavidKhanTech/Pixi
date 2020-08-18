@@ -35,14 +35,14 @@ export default class Landing extends Component {
   render() {
     return (
       <div>
-
-        <button onClick={this.handleSignUp}>
-          Sign Up
+        <div className="signBtn">
+          <button onClick={this.handleSignUp}>
+            Sign Up
       </button>
-        <button onClick={this.handleLogin}>
-          Login
+          <button onClick={this.handleLogin}>
+            Login
       </button>
-
+        </div>
         <div>
           {this.state.login ?
             <LoginForm currentUser={this.props.currentUser} setCurrentUser={this.props.setCurrentUser} {...this.props} />

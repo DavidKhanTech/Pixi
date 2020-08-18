@@ -44,7 +44,7 @@ export default class Header extends Component {
               <button className="logout" onClick={this.handleLogout}>Logout</button>
             </>
           ) : (
-              <Link className="signup" to='/'>Login/SignUp</Link>
+              <Link className="signup" to='/'>Home</Link>
             )
         }
 
