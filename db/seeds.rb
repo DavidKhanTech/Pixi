@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # user = User.create([{username: DaTest}, {password: }])
 
-@admin = User.create!(username: 'David', email: 'coolguy@wow.com', password: '012345')
-p "Users created: #{User.count}"
+# @admin = User.create!(username: 'David', email: 'coolguy@wow.com', password: '012345')
+# p "Users created: #{User.count}"
 
