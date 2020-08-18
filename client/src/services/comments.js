@@ -1,8 +1,13 @@
 import api from './api-helper'
 
 
-export const postComment = async (postData) => {
-  const resp = await api.post('/comments', postData);
+export const postComment = async (id, commentData) => {
+  const resp = await api.post(`/posts/${id}/comments`, { comment: commentData });
+  return resp.data;
+}
+
+export const getAllComment = async (commentData) => {
+  const resp = await api.get('/comments', commentData);
   return resp.data;
 }
 
@@ -11,8 +16,8 @@ export const putComments = async (id, postData) => {
   return resp.data;
 }
 
-export const destroyComments = async (id) => {
-  const resp = await api.delete(`/comments/${id}`);
+export const destroyComment = async (post_id, id) => {
+  const resp = await api.delete(`/posts/${post_id}/comments/${id}`);
   return resp;
 }
 

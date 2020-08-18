@@ -45,6 +45,15 @@ end
     @post.destroy
   end
 
+  # ADD Comment
+  def add_comment
+    @posts = Post.find(params[:id])
+    @comment = Comment.find(params[:post_id])
+    @post.comments << @comment
+    render json: @post, include: :comments
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

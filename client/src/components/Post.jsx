@@ -31,7 +31,7 @@ export default class Post extends Component {
       user_id: this.state.currentUser.id,
       post_id: this.id
     }
-    let res = await postComment(postData)
+    let res = await postComment(postData.post_id, postData.comment)
     console.log(res)
   }
 
@@ -136,6 +136,9 @@ export default class Post extends Component {
             <button onClick={this.handleComment}>Comment</button>
           </form>
           : ""}
+        <div>
+          <p>{this.state.comment_value}</p>
+        </div>
       </div>
     )
   }

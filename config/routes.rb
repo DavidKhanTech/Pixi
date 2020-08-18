@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get '/auth/verify', to: 'authentication#verify'
 
   resources :users
-  resources :posts
+  resources :posts do
   resources :comments
+  end
   
  get '/users/:id/posts/', to: 'posts#showposts'
   
